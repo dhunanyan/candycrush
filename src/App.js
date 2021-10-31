@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import ScoreBoard from "./components/ScoreBoard";
-import blueCandy from "./img/blue-candy.png";
-import greenCandy from "./img/green-candy.png";
-import orangeCandy from "./img/orange-candy.png";
-import purpleCandy from "./img/purple-candy.png";
-import redCandy from "./img/red-candy.png";
-import yellowCandy from "./img/yellow-candy.png";
-import blank from "./img/blank.png";
+import blueCandy from "./images/blue-candy.png";
+import greenCandy from "./images/green-candy.png";
+import orangeCandy from "./images/orange-candy.png";
+import purpleCandy from "./images/purple-candy.png";
+import redCandy from "./images/red-candy.png";
+import yellowCandy from "./images/yellow-candy.png";
+import blank from "./images/blank.png";
 
 const width = 8;
 const candyColors = [
@@ -220,7 +220,6 @@ const App = () => {
 
   return (
     <div className="app">
-      <ScoreBoard score={scoreDisplay} />
       <div className="game">
         {currentColorArrangement.map((candyColor, index) => (
           <img
@@ -238,6 +237,7 @@ const App = () => {
           />
         ))}
       </div>
+      <ScoreBoard score={scoreDisplay} />
     </div>
   );
 };
